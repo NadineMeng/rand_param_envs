@@ -1,5 +1,7 @@
 from rand_param_envs.base import MetaEnv
-from rand_param_envs.gym.envs.registration import register
+#from rand_param_envs.gym.envs.registration import register
+from gym.envs.registration import register
+
 
 register(
     id='Walker2DRandParams-v0',
@@ -7,8 +9,8 @@ register(
 )
 
 register(
-    id='HopperRandParams-v0',
-    entry_point='rand_param_envs.hopper_rand_params:HopperRandParamsEnv',
+    id='HopperRandParams-v0', entry_point='rand_param_envs.hopper_rand_params:HopperRandParamsEnv',
+     max_episode_steps=200,
 )
 
 register(

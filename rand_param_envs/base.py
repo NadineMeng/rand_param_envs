@@ -55,7 +55,7 @@ class RandomEnv(MetaEnv, MujocoEnv):
         - body_inertia
         - damping coeff at the joints
     """
-    RAND_PARAMS = ['body_mass', 'dof_damping', 'body_inertia', 'geom_friction']
+    RAND_PARAMS = ['body_mass', 'dof_damping']#, 'body_inertia', 'geom_friction']
     RAND_PARAMS_EXTENDED = RAND_PARAMS + ['geom_size']
 
     def __init__(self, log_scale_limit, file_name, *args, rand_params=RAND_PARAMS, **kwargs):
